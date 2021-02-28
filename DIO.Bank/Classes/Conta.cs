@@ -29,6 +29,7 @@ namespace DIO.Bank
         }
 
         // Método para sacar
+        // verificar se o valor do saque é menor que o valor em conta somado com o valor de credito;
         public bool SacarValor(double valor)
         {
 
@@ -56,8 +57,7 @@ namespace DIO.Bank
             return false;
         }
 
-        // Método para realizar transferência, saca o valor de uma conta e deposita na conta de destino.
-        //isso se o valor for maior que zero (0)
+        // Método para realizar transferência, saca o valor de uma conta de origem e deposita na conta de destino.
         public void Transferencia(double valorTranferencia, Conta contaDestino)
         {
             if (SacarValor(valorTranferencia))

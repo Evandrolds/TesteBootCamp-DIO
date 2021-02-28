@@ -40,7 +40,7 @@ namespace DIO.Bank
             Console.WriteLine("Obrigado por utilizar nossos serviços!");
             Console.ReadLine();
         }
-
+        // Método de Tranferencia
         private static void Transferir()
         {
             Console.WriteLine("Digite o Id da conta ");
@@ -50,7 +50,7 @@ namespace DIO.Bank
             double valorTransferencia = double.Parse(Console.ReadLine());
             newContas[indexContaOrigem].Transferencia(valorTransferencia, newContas[indexContaDestino]);
         }
-
+        // Método de depósito 
         private static void Depositar()
         {
             Console.WriteLine("Digite o Id da conta ");
@@ -58,9 +58,9 @@ namespace DIO.Bank
             Console.WriteLine("Digite o valor do saque R$: ");
             double valorDeposito = double.Parse(Console.ReadLine());
             newContas[numConta].Depositar(valorDeposito);
-        }
-
-        private static void inserirConta()
+        } 
+        // Método de Inserir uma nova conta
+         private static void inserirConta()
         {
             Console.WriteLine("Digite 1 para conta física ou 2 para jurídica");
             int entrarOpcao = int.Parse(Console.ReadLine());
@@ -77,11 +77,13 @@ namespace DIO.Bank
 
 
         }
+        // Menu de opções
         private static string obterOpcaoDeUsuario()
         {
             Console.WriteLine();
             Console.WriteLine(" DIO.Bank One em que posso ajudar? ");
             Console.WriteLine(" Informe a opção desejada");
+            Console.WriteLine("-----------MENU-----------");
             Console.WriteLine(" 1 Listar contas");
             Console.WriteLine(" 2 Inserir nova conta");
             Console.WriteLine(" 3 Transferir ");
@@ -93,7 +95,7 @@ namespace DIO.Bank
             Console.WriteLine();
             return opcao;
         }
-
+         //Método de listar contas
         private static void listarContas()
         {
             Console.WriteLine("------------Listar Contas-----------");
@@ -110,6 +112,7 @@ namespace DIO.Bank
             }
 
         }
+        // Método de saque
         private static void SacarValor()
         {
             Console.WriteLine("Digite o Id da conta ");
